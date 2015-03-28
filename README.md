@@ -14,6 +14,7 @@ planet each time a new link is reached.
 
 First, launch the server:
 
+    $ npm install
     $ node spider.js
     Server launched at 127.0.0.1:3000. Ctrl + C to terminate
 
