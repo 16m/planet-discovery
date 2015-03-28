@@ -110,7 +110,6 @@ function addPlanet() {
 	if (typeof addPlanet.distance == 'undefined')
 		addPlanet.distance = 2;
 	var size = getRandomInt(2, 7) / 10;
-	console.log(size);
 	var geometry = new THREE.SphereGeometry( size, 32, 32 );
 	var material = new THREE.MeshBasicMaterial( {
 		map: THREE.ImageUtils.loadTexture('http://localhost:3000/textures/soil.jpg')
@@ -152,7 +151,6 @@ render();
 var socket = io();
 socket.emit('launch spider', '');
 socket.on('new planet', function (msg) {
-	console.log('La planete ' + msg + ' a ete cree');
 	document.getElementById('log').innerHTML = '> ' + msg + '<br/>' + document.getElementById('log').innerHTML;
 	addPlanet();
 })
